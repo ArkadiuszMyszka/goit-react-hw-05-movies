@@ -3,7 +3,7 @@ import { PulseLoader } from 'react-spinners';
 
 const Spinner = ({
   position = 'left',
-  color = '#ce3d3d',
+  color = 'blue',
   loading,
   children,
 }) => {

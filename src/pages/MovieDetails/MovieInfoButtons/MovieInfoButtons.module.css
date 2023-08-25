@@ -5,9 +5,7 @@
   align-items: center;
   gap: 10px;
   margin-block: 15px;
-
   padding: 10px;
-
   border-block: 1px solid #888888b0;
 }
 .text {
@@ -16,7 +14,6 @@
 .btn {
   width: 100px;
   padding: 5px 10px;
-
   border: none;
   box-shadow: 0px 1px 2px 1px rgb(0 0 0 / 0.5);
   cursor: pointer;

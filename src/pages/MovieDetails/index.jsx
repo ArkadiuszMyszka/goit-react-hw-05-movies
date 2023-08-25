@@ -1,8 +1,6 @@
 import { Suspense } from 'react';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
-
 import useFetch from 'hooks/useFetch';
-
 import Spinner from 'components/Spinner';
 import MovieInfo from 'pages/MovieDetails/MovieInfo';
 import BackButton from 'components/BackButton';
@@ -13,7 +11,6 @@ import PageLoader from 'components/PageLoader';
 const MovieDetails = () => {
   const location = useLocation();
   const { movieId } = useParams();
-
   const {
     data: movie,
     isLoading,

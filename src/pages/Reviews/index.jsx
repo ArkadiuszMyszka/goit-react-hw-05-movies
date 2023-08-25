@@ -10,7 +10,6 @@ import ErrorPage from 'pages/ErrorPage';
 
 const Reviews = () => {
   const { movieId } = useParams();
-
   const {
     data: reviews,
     isLoading,
@@ -20,7 +19,6 @@ const Reviews = () => {
   });
 
   useEffect(() => {
-    // Reviews button styling
     const buttons = document.querySelector('[data-info="reviews"]');
     buttons.classList.add('active-btn');
 

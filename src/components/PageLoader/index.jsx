@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { BeatLoader } from 'react-spinners';
 
-const PageLoader = ({ color = '#4169e1' }) => {
+const PageLoader = ({ color = '#red' }) => {
   return (
     <BeatLoader
       color={color}

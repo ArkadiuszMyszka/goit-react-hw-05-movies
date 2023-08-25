@@ -11,11 +11,8 @@ import ErrorPage from 'pages/ErrorPage';
 const Movies = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
   const baseValue = location.state !== null ? location.state?.searchQuery : '';
-
   const [query, setQuery] = useState(baseValue);
-
   const {
     data: movies,
     isLoading,
@@ -32,7 +29,6 @@ const Movies = () => {
   }
 
   useEffect(() => {
-    // Reset state after page refresh
     navigate();
   }, [navigate]);
 

@@ -8,26 +8,7 @@
 
   max-width: 1200px;
 }
-.item {
-  position: relative;
 
-  padding-inline: 20px 10px;
-
-  box-shadow: 1px 2px 5px 1px rgb(0 0 0 / 0.5);
-}
-.item::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 10px;
-  width: 40px;
-  height: 40px;
-  background-image: url('/src/images/svg/person.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
 .author {
   margin-block-start: 55px;
 }

@@ -25,44 +25,38 @@ const useFetch = ({ url, initialParams = {} }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${url}?${allParams}`, { signal });
-        // console.log('API: ', response.data);
         setData(response.data);
         prevQueryRef.current = params?.query;
       } catch (err) {
         if (err.name === 'CanceledError') {
           setIsLoading(true);
-          // console.log('Request aborted');
         } else {
           setError(err);
           setData(null);
-          // console.log(err);
         }
       } finally {
         setIsLoading(false);
       }
     };
 
-    // if search query is "" then reset data and skip fetch request
     if (!url || params?.query === '') {
       setData(null);
       prevQueryRef.current = null;
       setIsLoading(false);
       return;
     }
-    // if data is the same as previous, skip fetch request
+
     if (isSameData) {
       setIsLoading(false);
       return;
     }
 
     fetchData();
-
     return () => {
       controller?.abort();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url, params]);
-
   return { data, error, isLoading, updateParams };
 };
 

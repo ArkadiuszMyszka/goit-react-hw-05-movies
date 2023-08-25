@@ -1,23 +1,17 @@
 .btn {
   position: relative;
   z-index: 1;
-
-  width: 30px;
+  width: 100%;
   height: 30px;
-  padding: 0;
+  padding-right: 0;
   margin-block: 15px 10px;
-
-  /* filter: invert(80%); */
-  background-color: transparent;
+  background-color: red;
   background-image: url('/src/images/svg/chevron-arrow.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 133%;
-
   border: none;
-
   cursor: pointer;
-
   transition: filter 150ms;
 }
 .btn:hover {
